@@ -1,0 +1,41 @@
+{
+  "name": "backbone-ladda",
+  "version": "1.0.0",
+  "description": "Backbone.View mixin for Ladda loading-indicator buttons",
+  "main": "index.js",
+  "scripts": {
+    "lint": "jshint .",
+    "test": "karma start",
+    "validate": "npm run lint && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jimf/backbone-ladda"
+  },
+  "keywords": [
+    "backbone",
+    "plugin",
+    "ladda"
+  ],
+  "author": "Jim Fitzpatrick",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jimf/backbone-ladda/issues"
+  },
+  "homepage": "https://github.com/jimf/backbone-ladda",
+  "devDependencies": {
+    "backbone": "^1.2.0",
+    "jasmine-core": "^2.3.4",
+    "jquery": "^2.1.4",
+    "jshint": "^2.7.0",
+    "karma": "^0.13.9",
+    "karma-browserify": "^4.3.0",
+    "karma-jasmine": "^0.3.5",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "phantomjs": "^1.9.18",
+    "underscore": "^1.8.3"
+  },
+  "dependencies": {
+    "ladda": "^0.9.8"
+  }
+}
