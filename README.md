@@ -19,7 +19,7 @@ __backbone-ladda__ exposes a `mixin` function for mixing Ladda button
 functionality into an existing Backbone view. The view `el` will
 unconditionally become a button element, and any `id`, `className`, and
 `attributes` properties specified on the view will be respected. Additional
-options (specified below) may be specified to configure the particular
+options (listed below) may be specified to configure the particular
 Ladda-specific behavior of the button.
 
 ```js
@@ -41,39 +41,39 @@ module.exports = Backbone.View.extend({
         this.start();
         setTimeout(this.stop, 2000);
     }
-})
+});
 ```
 
 ## Configuration
 
 The following options may be specified when extending Backbone.View:
 
-### `buttonStyle` (default: 'expand-right')
+#### `buttonStyle` (default: 'expand-right')
 
 Main spinner behavior. Maps to the Ladda __data-style__ option and takes all
 the same values.
 
-### `buttonColor`
+#### `buttonColor`
 
 Specifies the color of the button. Maps to the Ladda __data-color__ option and
 takes all the same values.
 
-### `buttonSize`
+#### `buttonSize`
 
 Specifies the size of the button. Maps to the Ladda __data-size__ option and
 takes all the same values.
 
-### `spinnerSize`
+#### `spinnerSize`
 
 Specifies the size of the spinner. Maps to the Ladda __data-spinner-size__
 option and takes all the same values.
 
-### `spinnerColor`
+#### `spinnerColor`
 
 Specifies the color of the spinner. Maps to the Ladda __data-spinner-color__
 option and takes all the same values.
 
-### `spinnerLines`
+#### `spinnerLines`
 
 Specifies the number of lines for the spinner. Maps to the Ladda
 __data-spinner-lines__ option and takes all the same values.
@@ -83,27 +83,27 @@ __data-spinner-lines__ option and takes all the same values.
 Once the mixin has been applied to the given view, the view will gain the
 following methods, which are thin wrappers around a ladda instance:
 
-### `start`
+#### `start()`
 
 Start the spinner.
 
-### `setProgress`
+#### `setProgress(value)`
 
 Display a progress bar within the button.
 
-### `stop`
+#### `stop()`
 
 Stop the spinner.
 
-### `toggle`
+#### `toggle()`
 
 Toggle between loading/not loading states.
 
-### `isLoading`
+#### `isLoading()`
 
 Check whether the spinner is in a loading state.
 
-### `remove`
+#### `remove()`
 
 Delete the ladda instance. This method will wrap a pre-existing `remove` method
 if already defined.
