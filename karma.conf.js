@@ -1,6 +1,8 @@
 /* jshint node:true */
 'use strict';
 
+var istanbul = require('browserify-istanbul');
+
 module.exports = function(config) {
     config.set({
         // base path, that will be used to resolve files and exclude
@@ -22,12 +24,22 @@ module.exports = function(config) {
         },
 
         browserify: {
-            debug: true
+            debug: true,
+            transform: [istanbul({
+                ignore: ['**/node_modules/**', '**/test/**']
+            })]
         },
 
         // test results reporter to use
         // possible values: 'dots', 'progress', 'junit'
-        reporters: ['dots'],
+        reporters: ['dots', 'coverage'],
+
+        coverageReporter: {
+            reporters: [
+                { type: 'lcov', subdir: 'phantomjs' },
+                { type: 'text-summary' }
+            ]
+        },
 
         // web server port
         port: 9876,

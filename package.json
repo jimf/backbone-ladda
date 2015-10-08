@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "jshint .",
     "test": "karma start",
-    "validate": "npm run lint && npm test"
+    "validate": "npm run lint && npm test && cat ./coverage/phantomjs/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "repository": {
     "type": "git",
@@ -25,11 +25,13 @@
   "homepage": "https://github.com/jimf/backbone-ladda",
   "devDependencies": {
     "backbone": "^1.2.0",
+    "browserify-istanbul": "^0.2.1",
     "jasmine-core": "^2.3.4",
     "jquery": "^2.1.4",
     "jshint": "^2.7.0",
     "karma": "^0.13.9",
     "karma-browserify": "^4.3.0",
+    "karma-coverage": "^0.5.2",
     "karma-jasmine": "^0.3.5",
     "karma-phantomjs-launcher": "^0.2.1",
     "phantomjs": "^1.9.18",
