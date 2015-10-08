@@ -26,6 +26,7 @@
   "devDependencies": {
     "backbone": "^1.2.0",
     "browserify-istanbul": "^0.2.1",
+    "coveralls": "^2.11.4",
     "jasmine-core": "^2.3.4",
     "jquery": "^2.1.4",
     "jshint": "^2.7.0",
